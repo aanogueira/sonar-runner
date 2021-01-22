@@ -1,0 +1,31 @@
+{
+  "name": "js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "jest": {
+    "testResultsProcessor": "jest-sonar-reporter",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!**/node_modules/**"
+    ],
+    "collectCoverage": true
+  },
+  "jestSonar": {
+    "sonar56x": true,
+    "reportPath": "coverage",
+    "reportFile": "report.xml",
+    "indent": 4
+  },
+  "keywords": [],
+  "author": "André Nogueira",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.1",
+    "jest-sonar-reporter": "^2.0.0"
+  },
+  "dependencies": {}
+}

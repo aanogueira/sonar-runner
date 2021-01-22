@@ -1,0 +1,39 @@
+# Vim swp files
+*.swp
+
+# Mac DS_Store files
+*.DS_Store
+
+# VSCode settings directory
+.vscode
+
+# Built dotnet project generated files
+**/bin/**
+**/obj/**
+
+# Build golang project generated files
+**/vendor/**
+
+# Built javascript project generated files
+**/node_modules/**
+**/coverage/**
+!**/coverage/report.xml
+!**/coverage/lcov.info
+
+# Built python project generated files
+**/bin/**
+**/lib/**
+**/man/**
+**/__pycache__/**
+**/.coverage
+**/pyvenv.cfg
+
+# Built java project generated files
+**/target/**
+**/.classpath
+**/.project
+**/.settings
+
+# Coverage reports
+**/*coverage/**
+**/*coverage*

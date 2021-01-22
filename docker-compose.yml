@@ -1,0 +1,60 @@
+version: '3.8'
+
+services:
+  scanner:
+    build:
+      context: .
+      dockerfile: local.Dockerfile
+    # Default credentials for SonarQube
+    # username: admin
+    # password: admin
+    environment:
+      USERNAME: admin
+      PASSWORD: admin
+    depends_on:
+      - sonarqube
+    networks:
+      - sonarqube
+
+  sonarqube:
+    image: sonarqube:8.4.2-community
+    ports:
+      - 9000:9000
+    environment:
+      SONAR_JDBC_URL: jdbc:postgresql://postgres/sonarqube
+      SONAR_JDBC_USERNAME: sonarqube
+      SONAR_JDBC_PASSWORD: sonarqube
+      SONAR_CORE_SERVERBASEURL: 'http://localhost:9000'
+      SONAR_AUTH_OIDC_ISSUERURI: ''
+      SONAR_AUTH_OIDC_CLIENTID_SECURED: ''
+      SONAR_AUTH_OIDC_CLIENTSECRET_SECURED: ''
+    depends_on:
+      - postgres
+    networks:
+      - sonarqube
+      - internal
+
+  postgres:
+    image: postgres:12.2-alpine
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_DB: sonarqube
+      POSTGRES_USER: sonarqube
+      POSTGRES_PASSWORD: sonarqube
+    networks:
+      - internal
+
+  # Accessing database for testing purposes
+  # adminer:
+  #   image: adminer
+  #   ports:
+  #     - 8080:8080
+  #   networks:
+  #   - internal
+
+networks:
+  sonarqube:
+    name: sonarqube_network
+  internal:
+    name: internal_network
