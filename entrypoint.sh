@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Execute all testing scans
-./scan-dotnet.sh
+./scan-dotnet-nunit.sh
 ./scan-dotnet-xunit.sh
 ./scan-go.sh
 ./scan-java.sh

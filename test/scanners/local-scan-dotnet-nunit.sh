@@ -11,7 +11,7 @@ CI_BUILD_REF_NAME='test-build'
 USERNAME='admin'
 PASSWORD='admin'
 
-cd dotnet
+cd dotnet-nunit
 
 # If the project has multiples .sln files
 # solution=Project.sln

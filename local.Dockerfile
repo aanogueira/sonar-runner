@@ -11,7 +11,7 @@ WORKDIR /root
 COPY scan.sh /root/scan.sh
 
 # Projects for testing purposes
-COPY test/dotnet /root/dotnet
+COPY test/dotnet-nunit /root/dotnet-nunit
 COPY test/dotnet-xunit /root/dotnet-xunit
 COPY test/go /root/go
 COPY test/java /root/java
@@ -19,7 +19,7 @@ COPY test/js /root/js
 COPY test/py /root/py
 
 # Scripts for testing purposes
-COPY test/scanners/local-scan-dotnet.sh /root/scan-dotnet.sh
+COPY test/scanners/local-scan-dotnet-nunit.sh /root/scan-dotnet-nunit.sh
 COPY test/scanners/local-scan-dotnet-xunit.sh /root/scan-dotnet-xunit.sh
 COPY test/scanners/local-scan-go.sh /root/scan-go.sh
 COPY test/scanners/local-scan-java.sh /root/scan-java.sh

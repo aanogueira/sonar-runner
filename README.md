@@ -19,14 +19,14 @@ with default credentials, a Postgres database as its backend and the sonar-runne
 
 Inside the [test](/test) folder we have six other ones:
 
-| Folder           | Description                                                                                    |
-| ---------------- | ---------------------------------------------------------------------------------------------- |
-| **dotnet**       | Dotnet project with testing (nunit) and report generated.                                      |
-| **dotnet-xunit** | Dotnet project with testing (xunit) and report generated.                                      |
-| **go**           | Golang project with testing and report generated.                                              |
-| **js**           | JavaScript project with testing and report generated.                                          |
-| **py**           | Python project with testing and report generated.                                              |
-| **scanners**     | Modified scripts of [scan.sh](scan.sh) and [scan-dotnet.sh](scan-dotnet.sh) for local testing. |
+| Folder           | Description                                                                                                      |
+| ---------------- | ---------------------------------------------------------------------------------------------------------------- |
+| **dotnet-nunit** | Dotnet project with testing (nunit) and report generated.                                                        |
+| **dotnet-xunit** | Dotnet project with testing (xunit) and report generated.                                                        |
+| **go**           | Golang project with testing and report generated.                                                                |
+| **js**           | JavaScript project with testing and report generated.                                                            |
+| **py**           | Python project with testing and report generated.                                                                |
+| **scanners**     | Modified scripts of [scan.sh](scan.sh) and [scan-dotnet-nunit.sh](local-scan-dotnet-nunit.sh) for local testing. |
 
 For the code coverage of each example to be imported to the sonar,
 each test program needs to be build/compiled/run tests.
@@ -177,8 +177,8 @@ our unit tests.
 
 For Python wee need to do some changes in the way we test our project. First we need to add two packages:
 
-* [coverage](https://pypi.org/project/coverage/) -> Code coverage testing for Python
-* [nose](https://pypi.org/project/nose/) -> Extends the test loading and running features of unittest
+- [coverage](https://pypi.org/project/coverage/) -> Code coverage testing for Python
+- [nose](https://pypi.org/project/nose/) -> Extends the test loading and running features of unittest
 
 Once we have both of the dependdencies, we can simply run:
 
