@@ -2,8 +2,8 @@
 
 SONAR_HOST_URL='http://sonarqube:9000'
 CI_PROJECT_NAMESPACE='test'
-CI_PROJECT_NAME='Dotnet-Xunit'
-CI_PROJECT_TITLE='Dotnet Xunit Test Project'
+CI_PROJECT_NAME='Dotnet-xUnit'
+CI_PROJECT_TITLE='Dotnet xUnit Test Project'
 RELEASE_VERSION='1.0.1'
 CI_PROJECT_URL='laptop.local'
 CI_BUILD_REF='123456789'
