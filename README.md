@@ -19,14 +19,14 @@ with default credentials, a Postgres database as its backend and the sonar-runne
 
 Inside the [test](/test) folder we have six other ones:
 
-| Folder           | Description                                                                                                      |
-| ---------------- | ---------------------------------------------------------------------------------------------------------------- |
-| **dotnet-nunit** | Dotnet project with testing (nunit) and report generated.                                                        |
-| **dotnet-xunit** | Dotnet project with testing (xunit) and report generated.                                                        |
-| **go**           | Golang project with testing and report generated.                                                                |
-| **js**           | JavaScript project with testing and report generated.                                                            |
-| **py**           | Python project with testing and report generated.                                                                |
-| **scanners**     | Modified scripts of [scan.sh](scan.sh) and [scan-dotnet-nunit.sh](local-scan-dotnet-nunit.sh) for local testing. |
+| Folder           | Description                                               |
+| ---------------- | --------------------------------------------------------- |
+| **dotnet-nunit** | Dotnet project with testing (nunit) and report generated. |
+| **dotnet-xunit** | Dotnet project with testing (xunit) and report generated. |
+| **go**           | Golang project with testing and report generated.         |
+| **js**           | JavaScript project with testing and report generated.     |
+| **py**           | Python project with testing and report generated.         |
+| **scanners**     | Modified scripts of [scan.sh](scan.sh) for local testing. |
 
 For the code coverage of each example to be imported to the sonar,
 each test program needs to be build/compiled/run tests.
