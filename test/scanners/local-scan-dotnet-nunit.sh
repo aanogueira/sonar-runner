@@ -48,7 +48,7 @@ if [[ -z "${solution}" ]]; then
   dotnet restore .
   coverlet . \
     --target "dotnet" \
-    --targetargs "test . /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --logger:trx;LogFileName=testresult.xml /p:CoverletOutput=TestResults\coverage.opencover.xml" \
+    --targetargs "test . /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --logger:trx;LogFileName=testresult.xml /p:CoverletOutput=TestResults/coverage.opencover.xml" \
     --format opencover \
     --output TestResults/ \
     --include-test-assembly
@@ -59,7 +59,7 @@ else
   dotnet restore $solution
   coverlet . \
     --target "dotnet" \
-    --targetargs "test ${solution} /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --logger:trx;LogFileName=testresult.xml /p:CoverletOutput=TestResults\coverage.opencover.xml" \
+    --targetargs "test ${solution} /p:CollectCoverage=true /p:CoverletOutputFormat=opencover --logger:trx;LogFileName=testresult.xml /p:CoverletOutput=TestResults/coverage.opencover.xml" \
     --format opencover \
     --output TestResults/ \
     --include-test-assembly

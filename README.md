@@ -82,7 +82,17 @@ Below is the additional configuration needed in order to retrieve the code cover
 
 ### Dotnet Requirements
 
-> Integration still being implemented.
+For the Dotnet projects, since we are using [coverlet](https://github.com/coverlet-coverage/coverlet)
+in order to extract code coverage from our projects, we'll need to add a dependency to our `.csproj` file:
+
+```sh
+dotnet add package coverlet.msbuild
+```
+
+Once we build our project, this will generate a report containing the information code coverage of
+our unit tests.
+
+> Validated with [NUnit](https://github.com/nunit/nunit) and [xUnit](https://github.com/xunit/xunit) testing frameworks.
 
 ### Go Requirements
 
